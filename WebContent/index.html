@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>ProxyPool</title>
+</head>
+<body>
+
+<p>
+<b>proxypool.info</b> went live!
+<p>
+<p>This is a equihash stratum server that allows you to proxy through to equihash servers for Zcash, Zclassic, Zencash, Hush and Komodo mining.
+<p>No registration needed, just connect to <b>proxypool.info:7721</b> with you stratum miner and use CoinAbr=user:password@host:port,.. formatted login to list pools you want to mine on. The proxypool is gathering the mining information directly from cryptocurrency networks and coin prices from exchanges to define what is the most profitable coin to mine with and direct your mining power to the pool of the corresponing coin.
+<p>
+<p>It does pretty much similiar thing that nicehash equihash pool, but no registration needed, pool fee is 1% (on top of your destination pool fee and your miner software developer fee), which is still far less then nicehash takes. And you manage your coins on your own.
+<p>This differs from client-side profit switchers, no need to install heavy switchers on a client side (switching of miners usually disallows you to benefit from GPU overclocking and often leads to miner or even OS crashes) - just use your prefferred equihash miner.
+<p>
+<p>You can check the statistics of the destination pools to find out the real profitability, it's expected to be in avarage 20% more profitable than to mine any of the listed coins only even after 24h prices change.
+<p>
+<p>For those who wants their coins to be auto sold to bitcoin - we suggest to use exchanges that can do that automatically for your (like bittrex.com) and point your destination pools to the currecies on those exchanges. If that appear to be handy  - we will come up with the detailed instructions to set that up.
+<p>
+<p>
+<p>Note, not all equihash mining software supports such a long usernames, so here are the examples of usage with  <a href="https://bitcointalk.org/index.php?topic=1707546.0">EWBF's CUDA Zcash miner</a> that worked well for us:
+<p>
+<p>Example 1:
+<p style="font-family:'Lucida Console', monospace">miner.exe --server proxypool.info --port 7721 --user ZEC=t1TCEvgTkbrC77SnjUiyPhqftfhvrHk47bQ.rig1:x@eu1-zcash.flypool.org:3333,ZEN=znp7XxaxyT2yRHBrrVzVuHgC1Vi813owMNe.rig1:x@eu.zenmine.pro:9009 --pass x</p>
+<p>
+<p>Example 2:
+<p style="font-family:'Lucida Console', monospace">miner.exe --server proxypool.info --port 7721 --user ZEC=ppmine.rig1:x@zec.suprnova.cc:2142,ZEN=ppmine.rig1:x@zen.suprnova.cc:3618,ZCL=ppmine.rig1:x@zcl.suprnova.cc:4042,HUSH=ppmine.rig1:x@hush.suprnova.cc:4048 --pass x</p>
+<p>
+<p>ZEC,ZEN,ZCL,HUSH,KMD coins are now supported, you can use any of those. In a case you get disconnected - check if you have properly composed the username.
+<p>(do not expect you to use ':' and '@' symbols in password as those are used as delimeters, but suggest to improve that later on) 
+<p>
+<p>Coin &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Pool Login &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Pool Password &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Pool host &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Pool port
+<p>ZEC 	<input id="cbZEC"	type="checkbox" checked>	<input type="text" name="zecLogin" value="t1TCEvgTkbrC77SnjUiyPhqftfhvrHk47bQ.rig1"> <input type="text" name="zecPassword" value="x"> <input type="text" name="zecHost" value="eu1-zcash.flypool.org"> <input type="text" name="zecPort" value="3333">
+<p>ZEN 	<input id="cbZEN"	type="checkbox" checked>	<input type="text" name="zenLogin" value="znp7XxaxyT2yRHBrrVzVuHgC1Vi813owMNe.rig1"> <input type="text" name="zenPassword" value="x"> <input type="text" name="zenHost" value="eu.zenmine.pro"> <input type="text" name="zenPort" value="9009">
+<p>ZCL 	<input id="cbZCL"	type="checkbox">	<input type="text" name="zclLogin"> <input type="text" name="zclPassword"> <input type="text" name="zclHost"> <input type="text" name="zclPort">
+<p>HUSH	<input id="cbHush"	type="checkbox">	<input type="text" name="hushLogin"> <input type="text" name="hushPassword"> <input type="text" name="hushHost"> <input type="text" name="hushPort">
+
+<p>launch command for EWBF's miner:
+
+</body>
+</html>
